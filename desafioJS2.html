@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de boas vindas!</title>
+</head>
+
+<body>
+    <h1>Boas vindas!</h1>
+    <button id="botaodesafio">Inicie o desafio</button> <!-- O id serve para eu poder acessar essa tag dentro so script-->
+
+<script>
+    document.getElementById("botaodesafio").addEventListener("click", function() {
+        var nome = prompt("Qual o seu nome?");
+        var idade = parseInt(prompt("Olá, " + nome + "! Quantos anos você tem?"));
+        alert("Acabei de conhecer o(a) " + nome + " que tem " + idade + " anos de idade!"); // nessa parte do código acontece o evento de clique, a chamada da função e o armazenamento dos dados inseridos nas variaveis
+    });
+</script>
+</body>
+</html>
