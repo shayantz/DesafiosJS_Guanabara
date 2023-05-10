@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do troco</title>
+</head>
+
+<body>
+    <h1> Calculando o troco </h1>
+    <button id = "troco" > Comprar produto </button>
+
+    <script>
+
+        document.getElementById("troco").addEventListener("click", function() {
+        var nomeProduto = prompt("Qual produto você quer comprar?")
+        var valorProduto = parseInt(prompt("Quanto custa o " + nomeProduto + " que você quer comprar?" ))
+        var valorPago = prompt("Qual valor você deu para pagar o " + nomeProduto + "?")
+        var troco = valorPago - valorProduto
+
+        if (troco < 1) {
+            alert("Você não deu dinheiro suficiente para comprar esse produto!")
+        } else {
+            alert("Você comprou o produto " + nomeProduto + ", que custa: " + valorProduto + "." + "\n" + "Você pagou " + valorPago + " por esse produto." + "\n" + "Você vai receber R$ " + troco + " de troco." )
+        }})
+
+
+
+</script>
+</body>
+</html>
+ 
