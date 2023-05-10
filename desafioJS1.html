@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio dos botões </title>
+</head>
+
+<body>
+    <h1> Desafio dos botões </h1>
+    <button id = primeirobotao> Botão 1 </button> <!-- o id é necessário pra poder chamar o botão depois no javascript-->
+    <button id = segundobotao> Botão 2 </button>
+    <button id = terceirobotao> Botão 3 </button>
+
+<script>
+   document.getElementById("primeirobotao").addEventListener("click", function() {
+     return alert("Você clicou no 1º botão!") // a função nesse caso serve para acontecer o evento somente quando o botão for clicao
+   });
+   document.getElementById("segundobotao").addEventListener("click", function() {
+     return alert("Você clicou no 2º botão!")
+   });
+   document.getElementById("terceirobotao").addEventListener("click", function() {
+     return alert("Você clicou no 3º botão!")
+   });
+
+</script>
+</body>
+</html>
