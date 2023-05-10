@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio antes e depois </title>
+</head>
+<body>
+    <h1> Antes e depois </h1>
+    <button id = antes_depois> Antecessor e Sucessor </button>
+
+    <script>
+document.getElementById("antes_depois").addEventListener("click", function() {
+    var numerointeiro = parseInt(prompt("Digite um número inteiro qualquer"))
+    var antecessor = numerointeiro - 1
+    var sucessor = numerointeiro + 1
+    alert("O antecessor do número " + numerointeiro + " é " + antecessor + "." + "\n" + "O sucessor do número " + numerointeiro + " é " + sucessor + ".")
+
+})
+
+// o \n serve para pular linha quando o <br> não funcionar
+// foi preciso criar uma variavel pro numero, e outras duas pro calculo de antecessor e sucessor
+    </script>
+</body>
+</html>
