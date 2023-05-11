@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperaturas </title>
+</head>
+    <body>
+            <h1> Conversor de temperaturas </h1>
+            <button id = "temp"> Converter </button>
+            <h2 id = frasegrande> </h2> <!-- Criei essa tag com ID pra poder referenciar o h2 dentro do javascript, não precisa ter nada no conteudo-->
+            <p id = "texto"> Clique no botão acima para iniciar. </p>
+           
+            <script>
+               document.getElementById("temp").addEventListener("click", function() {
+                var celsius = parseInt(prompt("Digite uma temperatura em C° (Celsius)"))
+                var fahrenheit = (celsius * 1,8) + 32
+                var kelvin = celsius + 273.15
+                var frase = document.getElementById("frasegrande")
+                var resultado = document.getElementById("texto")
+                
+                frase.innerHTML = "A temperatura de " + celsius + " corresponde a..." + "<br>"
+                resultado.innerHTML = "O valor de " + celsius + " convertido para Fahrenheit(°F) é de " + fahrenheit + "." + "<br>" 
+                + "O valor de " + celsius + " convertido para Kelvin(ºK) é de " + kelvin + "." + "<br>" 
+
+               })
+                
+            </script>
+    </body>
+</html>
+
+<!-- Nesse código usei o innerHTML para referenciar um objeto HTML dentro do JavaScript 
