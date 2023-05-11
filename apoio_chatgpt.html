@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+</head>
+
+<body>
+    <h1>Conversor de medidas</h1>
+    <button id="conversor">Converter</button>
+    <p id="resultado">Clique no botão acima para iniciar.</p>
+
+    <script>
+        document.getElementById("conversor").addEventListener("click", function() {
+            var metros = parseInt(prompt("Digite uma distância em metros (m)"));
+            var quilometros = metros * 1000;
+            var hectometro = metros / 100;
+            var decametro = metros / 10;
+            var decimetro = metros * 10;
+            var centimetro = metros * 100;
+            var milimetro = metros / 1000;
+
+            var resultadoElemento = document.getElementById("resultado");
+            resultadoElemento.innerHTML = "O valor de " + metros + " metros convertidos para hectômetros é de " + hectometro + ".<br>" +
+                "O valor de " + metros + " metros convertidos para decâmetros é de " + decametro + ".<br>" +
+                "O valor de " + metros + " metros convertidos para decímetros é de " + decimetro + ".<br>" +
+                "O valor de " + metros + " metros convertidos para centímetros é de " + centimetro + ".<br>" +
+                "O valor de " + metros + " metros convertidos para milímetros é de " + milimetro + ".<br>";
+        });
+    </script>
+</body>
+</html>
