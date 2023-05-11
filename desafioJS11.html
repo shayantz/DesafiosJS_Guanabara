@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano bissexto</title>
+    <style>
+        .verdinho {
+            color: rgb(31, 192, 31);
+        }
+        .vermelho {
+            color: rgb(211, 39, 39);
+        }
+    </style>
+</head>
+<body>
+    <h1> Ano bissexto</h1>
+    <button id="verifica"> Verificar </button>
+    <h2 id="analise"></h2>
+    <p id="texto"> Informe um ano para saber se ele é bissexto. </p>
+    <script>
+        document.getElementById("verifica").addEventListener("click", function() {
+            var anoDigitado = parseInt(prompt("Qual é o ano que você quer verificar se é bissexto?"));
+            var titulo = document.getElementById("analise");
+            var textinho = document.getElementById("texto");
+
+            function bissexto(anoDigitado) { //a função recebeu o parametro anodigitado para ter acesso ao numero digitado pelo usuario
+                if ((anoDigitado % 4 === 0 && anoDigitado % 100 !== 0) || anoDigitado % 400 === 0) {
+                    return "<span class='verdinho'> é bissexto! </span>";
+                } else {
+                    return "<span class='vermelho'> não é bissexto! </span>";  //a tag span foi usada pra selecionar o bloco de código com as cores
+                }
+            }
+
+            titulo.innerHTML = "Verificando o ano de " + anoDigitado + "...<br>";
+            textinho.innerHTML = "O ano de " + anoDigitado + bissexto(anoDigitado);
+        });
+    </script>
+</body>
+</html>
