@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Reajuste Salarial</title>
+</head>
+<body>
+    <h1> Reajuste Salarial </h1>
+    <button id = "reajuste"> Reajustar salário </button>
+    <p> Clique no botão acima para iniciar. </p>
+    <h2 id = "frase"> </h2>
+    <p id = "final"> </p>
+
+        <script>
+            document.getElementById("reajuste").addEventListener("click", function() {
+                var nomeFuncionario = prompt("Qual é o nome do funcionário?")
+                var salarioAtual = parseInt(prompt ("Qual é o salário de " + nomeFuncionario))
+                var aumento = parseInt(prompt ("O salário de " + nomeFuncionario + " vai ser ajustado em qual porcentagem?"))
+                var calculo = (salarioAtual * aumento)/ 100
+                var acrescimo = (salarioAtual + calculo)
+                var resultado = document.getElementById("frase")
+                var frasesFinais = document.getElementById("final")
+
+            resultado.innerHTML = nomeFuncionario + " recebeu um aumento salarial!"
+            frasesFinais.innerHTML = "O salário atual é de R$" + salarioAtual + "." + "<br>" +
+                                     "Com o aumento de " + aumento + "% o acréscimo no salário é de R$" + calculo + "." + "<br>" +
+                                     "Dessa forma, " + nomeFuncionario + " passa a ganhar R$" + acrescimo + "!"
+
+            })
+        </script>
+    
+</body>
+</html>
