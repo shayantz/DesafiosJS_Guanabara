@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+        <meta charset="UTF-8">
+    <title> Calculo de desconto R$ -> US$ </title>
+    </head>
+        <body>
+                <h1 id = "titulo"> Calcular Desconto </h1>
+                <button id = "conversor"> Desconto de 10% </button>
+                <h2 id = "resultadofrase"> </h2>
+                <p id = "frase" > Clique no botão acima para iniciar </p>
+           
+
+                    <script> 
+                               
+                        document.getElementById("conversor").addEventListener("click", function() {
+                        var produtoComprado = prompt("Qual o produto que está sendo comprado?")
+                        var preçoProduto = prompt("Qual é o preço de " + produtoComprado + "?")
+                        var resposta = document.getElementById("resultadofrase")
+                        var resultado = document.getElementById("frase")
+                        var desconto = preçoProduto * 0.1
+                        var preçoFinal = preçoProduto - desconto
+
+                    resposta.innerHTML = "Calculando desconto de 10% para " + produtoComprado
+                    resultado.innerHTML = "O preço original era R$" + preçoProduto + "." + "<br>"
+                                        + "Você acaba de ganhar R$" + desconto + " de desconto. (-10%)" + "<br>" 
+                                        + "No fim, você vai pagar R$" + preçoFinal + " pelo produto " + produtoComprado + "."                                   
+                        })
+
+                    </script>
+        </body>
+    </html>
