@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+        <meta charset="UTF-8">
+    <title>Conversor R$ -> US$ </title>
+    </head>
+        <body>
+                <h1 id = "titulo"> Conversor R$ -> US$ </h1>
+                <button id = "conversor"> Converter </button>
+                <p id = "frase" > Clique no botão acima para iniciar </p>
+                <h2 id = "resultadofrase"> </h2>
+
+                    <script> 
+                        var cotacao = parseInt(prompt("Antes de mais nada: Quanto está a cotação do dólar agora?"))
+                        
+                        document.getElementById("conversor").addEventListener("click", function() {
+                        var carteira = parseInt(prompt("Quantos R$ você tem na carteira?"))
+                        var resultado = carteira * cotacao
+                        var resposta = document.getElementById("resultadofrase")
+
+                    resposta.innerHTML = "Com R$" + carteira + " você conseguirá comprar US$" + resultado + "."
+                        })
+
+                    </script>
+        </body>
+    </html>
